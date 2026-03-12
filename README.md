@@ -4,19 +4,16 @@
 
 - **Visual Studio 2019 / 2022** (Community или выше)
 - **.NET Framework 4.7.2** (устанавливается вместе с VS или через Windows Update)
-- **SQL Server LocalDB** (входит в Visual Studio, компонент «Data storage and processing»)
+
 
 ## Запуск проекта
 
 1. Откройте файл `SleepyMonti.csproj` в Visual Studio.
 2. Нажмите **F5** или «Запуск без отладки» (Ctrl+F5).
 3. При первом запуске приложение автоматически:
-   - создаст базу данных **SleepyMontiDB** в LocalDB;
+   - создаст базу данных **SleepyMontiDB** в Exel;
    - создаст все необходимые таблицы;
    - заполнит каталог товаров и добавит 3 тестовых курьера.
-
-> Если LocalDB не установлен, скачайте его отдельно:
-> https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb
 
 ## Структура проекта
 
@@ -45,5 +42,3 @@ SleepyMonti/
 ## База данных
 
 Таблицы: **Clients**, **Products**, **Couriers**, **Orders**, **OrderItems**
-
-Строка подключения: `(localdb)\MSSQLLocalDB` — изменить при необходимости в файле `DatabaseHelper.cs`.
